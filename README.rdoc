@@ -1,14 +1,13 @@
 === Web-To-Lead Capture Plugin for Fat Free CRM
 
-This sample plugin shows how to implement Fat Free CRM application 
-controller callback hook to capture lead information submitted from
-remote form. For more information about Fat Free CRM visit
-http://github.com/michaeldv/fat_free_crm/tree/master
+This plugin shows how to implement Fat Free CRM application controller
+callback hook to capture lead data submitted from remote form. For more
+information about Fat Free CRM visit http://github.com/michaeldv/fat_free_crm/tree/master
 
-Remote form should POST two hidden fields to identify the user who'll
-own the lead:
+To submit a lead remote form should POST two extra hidden fields to
+identify the user who will own the lead:
  
-  <input type="hidden" name="authorization" value="<<< password_hash Here >>>"
+  <input type="hidden" name="authorization" value="<<< password_hash here >>>"
   <input type="hidden" name="token" value="<<< password_token here >>>"
 
 You can test the submission by posting the form using +curl+:
@@ -16,8 +15,8 @@ You can test the submission by posting the form using +curl+:
   $ curl -d "first_name=John&last_name=&Doe&authorization=?&token=?" localhost:3000/leads/create
   
 Replace question marks with the actual values of +password_hash+ and
-+password_token+ as set in +users+ table. Successful lead submission
-gets logged in Rails log file.
++password_token+ as set in +users+ table. Successful lead submissions
+get logged in Rails log file.
 
 Enjoy!
 
