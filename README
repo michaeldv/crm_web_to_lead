@@ -1,8 +1,0 @@
-Sample web-to-lead capture plugin for Fat Free CRM
-Copyright (c) 2009 by Michael Dvorkin, released under the MIT license
-
-This sample plugin shows how to implement Fat Free CRM controller filter
-callback hook to capture lead information submitted from remote form.
-
-Fat Free CRM -- http://github.com/michaeldv/fat_free_crm/tree/master
-
