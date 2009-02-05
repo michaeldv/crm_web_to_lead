@@ -7,8 +7,14 @@ information about Fat Free CRM visit http://github.com/michaeldv/fat_free_crm/tr
 To submit a lead remote form should POST two extra hidden fields to
 identify the user who will own the lead:
  
-  <input type="hidden" name="authorization" value="<<< password_hash here >>>"
-  <input type="hidden" name="token" value="<<< password_token here >>>"
+  <input type="hidden" name="authorization" value="<<< password_hash here >>>">
+  <input type="hidden" name="token" value="<<< password_token here >>>">
+
+Two more hidden fields specify redirection URLs -- upon successful
+submit and in case of failure:
+
+  <input type="hidden" name="on_success" value="<<< fuccess URL here >>>">
+  <input type="hidden" name="on_success" value="<<< failure URL here >>>">
 
 You can test the submission by posting the form using +curl+:
 
