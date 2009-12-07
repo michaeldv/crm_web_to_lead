@@ -9,7 +9,7 @@ information about Fat Free CRM visit http://github.com/michaeldv/fat_free_crm/tr
 The plugin installs just like any Ruby on Rails plugin packaged as git.
 Assuming that you have Fat Free CRM up and running:
 
-  $ ./script/install plugin git://github.com/michaeldv/crm_web_to_lead.git
+  $ ./script/plugin install git://github.com/michaeldv/crm_web_to_lead.git
 
 The sample plugin will be installed in vendor/plugins/crm_web_to_lead directory.
 
@@ -18,8 +18,8 @@ The sample plugin will be installed in vendor/plugins/crm_web_to_lead directory.
 To submit a lead remote form should POST two extra hidden fields to
 identify the user who will own the lead:
 
-  <input type="hidden" name="authorization" value="-- password_hash here --">
-  <input type="hidden" name="token" value="-- password_token here --">
+  <input type="hidden" name="authorization" value="-- users.password_hash here --">
+  <input type="hidden" name="token" value="-- users.password_salt here --">
 
 Two more hidden fields specify redirection URLs to handle successful
 submissions and possible validation errors:

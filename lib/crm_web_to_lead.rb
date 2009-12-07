@@ -10,8 +10,8 @@ class AppCallback < FatFreeCRM::Callback::Base
   
     # Remote form should POST two hidden fields to identify the user who'll own the lead:
     # 
-    # <input type="hidden" name="authorization" value="-- password_hash here --">
-    # <input type="hidden" name="token"         value="-- password_token here --">
+    # <input type="hidden" name="authorization" value="-- users.password_hash here --">
+    # <input type="hidden" name="token"         value="-- users.password_salt here --">
 
     params = controller.params
     if controller.request.post? && !params[:authorization].blank? && !params[:token].blank?
