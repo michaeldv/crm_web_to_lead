@@ -24,7 +24,7 @@ identify the user who will own the lead:
 Two more hidden fields specify redirection URLs to handle successful
 submissions and possible validation errors:
 
-  <input type="hidden" name="on_success" value="-- fuccess URL here --">
+  <input type="hidden" name="on_success" value="-- success URL here --">
   <input type="hidden" name="on_success" value="-- failure URL here --">
 
 The following sample is a good start to build your own lead capture form.
@@ -45,7 +45,7 @@ The following sample is a good start to build your own lead capture form.
   </html>
 
 Replace question marks with the actual values of +password_hash+ and
-+password_token+ as set in +users+ table. Successful lead submissions
++password_salt+ as set in +users+ table. Successful lead submissions
 get logged in Rails log file.
 
 Enjoy!
