@@ -18,6 +18,7 @@ class AppCallback < FatFreeCRM::Callback::Base
       user = User.find_by_password_hash_and_password_salt(params[:authorization], params[:token])
 
       # Implant @current_user so that :require_user filter becomes a noop.
+      params[:lead][:user_id] ||= user.id.to_s
       controller.instance_variable_set("@current_user", user)
       controller.logger.info(">>> web-to-lead: creating lead for user " + user.inspect) if controller.logger
     end
